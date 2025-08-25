@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstraps -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
+      integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="cart" data-bs-spy="scroll" data-bs-target="#navbarscroll">
+    <!-- satrt nav bar  -->
+    <nav class="navbar navbar-expand-lg text-black fixed-top" id="navbarscroll">
+      <div class="container">
+        <a class="navbar-brand fw-bold p-2 text-white" href="#">Foodi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p2">
+            <li class="nav-item me-3">
+              <a
+                class="nav-link text-white active position-relative"
+                aria-current="page"
+                href="#header"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#meals">meals</a>
+            </li>
+
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#contact">Contact us</a>
+            </li>
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#about">About foodi</a>
+            </li>
+            <li class="nav-item me-3 position-relative cartPage">
+              <a class="nav-link text-white"
+                ><i class="fa-solid fa-cart-plus fs-4"></i
+              ></a>
+            </li>
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#"
+                ><i class="fa-solid fa-right-from-bracket fs-4"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <section class="my-5 py-5">
+      <div class="container">
+        <h1 class="text-center mb-4 fw-bold">Cart Items</h1>
+        <div class="row g-4">
+          <div class="col-md-8 cartCheckout"></div>
+          <!-- Right side summary -->
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Subtotal</span>
+                  <span class="subTotal"></span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Shipping</span>
+                  <span>$4.99</span>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold fs-5">Total</span>
+                  <div>
+                    <p class="fw-bold mb-0 fs-5 totalPrice"></p>
+                    <small class="text-muted">including VAT</small>
+                  </div>
+                </div>
+                <button class="btn w-100 mt-4 checkOut">Check out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- start footer -->
+    <footer id="about" class="pt-5">
+      <div class="container text-white p-5">
+        <div class="row mb-2">
+          <div class="col-md-4">
+            <h3 class="text-white fw-semibold">Foodi</h3>
+            <p class="text-white w-75 my-3">
+              In the new era of technology we look a in the future with
+              certainty and pride to for our company and.
+            </p>
+            <div class="social-icons d-flex gap-3">
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="fw-bold mb-3">Pages</h5>
+                <div class="d-flex flex-column gap-2">
+                  <a>Home</a>
+                  <a>About</a>
+                  <a>Menu</a>
+                  <a>Pricing</a>
+                  <a>Delivery</a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5 class="fw-bold mb-3">Help</h5>
+                <div class="d-flex flex-column gap-2">
+                  <a>Contact Us</a>
+                  <a>FAQs</a>
+                  <a>19667</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="text-white fw-semibold mb-3">Follow Us On Instagram</h5>
+            <div class="row g-2">
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="w-75 m-auto mt-5" />
+        <p class="text-center p-3">
+          Copyright © 2025 Hashtag Developer. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

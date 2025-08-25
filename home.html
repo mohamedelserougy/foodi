@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <!-- SweetAlert2 CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstraps -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
+      integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="home" data-bs-spy="scroll" data-bs-target="#navbarscroll">
+    <!-- satrt nav bar  -->
+    <nav class="navbar navbar-expand-lg text-black fixed-top" id="navbarscroll">
+      <div class="container">
+        <a class="navbar-brand fw-bold p-2 text-white" href="#">Foodi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p2">
+            <li class="nav-item me-3">
+              <a
+                class="nav-link text-white active position-relative"
+                aria-current="page"
+                href="#header"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#meals">meals</a>
+            </li>
+
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#contact">Contact us</a>
+            </li>
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#about">About foodi</a>
+            </li>
+            <li class="nav-item me-3 position-relative cartPage">
+              <a class="nav-link text-white"
+                ><i class="fa-solid fa-cart-plus fs-4"></i
+              ></a>
+            </li>
+            <li class="nav-item me-3 position-relative">
+              <a class="nav-link text-white" href="#"
+                ><i class="fa-solid fa-right-from-bracket fs-4"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- start header -->
+    <header id="header" class="py-5">
+      <div class="container p-3">
+        <div
+          id="slider"
+          class="slider mt-5 position-relative overflow-hidden p-5 rounded-4 d-flex justify-content-center align-items-center"
+        >
+          <div
+            class="layer position-absolute top-0 start-0 end-0 bottom-0"
+            style="background: rgba(0, 0, 0, 0.4)"
+          ></div>
+
+          <!-- Content -->
+          <div class="content text-center text-white position-relative">
+            <h1 id="sliderTitle" class="fw-bolder">Welcome to Foodi</h1>
+            <p id="sliderText" class="py-2 w-50 m-auto text-white">
+              Your favorite meals delivered right to your doorstep. Explore our
+              menu and order now!
+            </p>
+            <button id="sliderBtn" class="btn btn-danger px-3 py-2 rounded-3">
+              Order Now
+            </button>
+          </div>
+
+          <!-- Arrows -->
+          <span
+            id="previous"
+            class="position-absolute top-50 start-0 translate-middle-y fs-2 text-white px-3"
+            style="cursor: pointer"
+          >
+            &#10094;
+          </span>
+          <span
+            id="next"
+            class="position-absolute top-50 end-0 translate-middle-y fs-2 text-white px-3"
+            style="cursor: pointer"
+          >
+            &#10095;
+          </span>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start menu -->
+    <section id="meals" class="py-5">
+      <div class="container">
+        <div class="title text-center mb-3">
+          <h3 class="d-inline-block position-relative text-capitalize z-3">
+            meals
+          </h3>
+        </div>
+
+        <div
+          class="filteration d-flex flex-column justify-content-center align-items-center p-3"
+        >
+          <ul id="menu" class="d-flex gap-3 me-3">
+            <li class="fw-semibold fs-5 filter-btn active" data-category="All">
+              All
+            </li>
+            <li class="fw-semibold fs-5 filter-btn" data-category="Pizza">
+              Pizza
+            </li>
+            <li class="fw-semibold fs-5 filter-btn" data-category="Pasta">
+              Pasta
+            </li>
+            <li class="fw-semibold fs-5 filter-btn" data-category="Burger">
+              Burger
+            </li>
+            <li class="fw-semibold fs-5 filter-btn" data-category="Desserts">
+              Dessert
+            </li>
+          </ul>
+
+          <div class="filter-box d-flex align-items-center gap-2">
+            <input
+              id="priceInput"
+              type="number"
+              class="form-control"
+              id="price"
+              placeholder="Enter price"
+            />
+            <!-- <button class="btn px-3 py-1" id="apply">Apply</button> -->
+          </div>
+        </div>
+
+        <div class="row mt-4 g-3" id="diplayProduct"></div>
+      </div>
+    </section>
+    <!-- end menu -->
+
+    <!-- start contact us -->
+    <section id="contact" class="contact py-5">
+      <div class="container">
+        <div class="title text-center">
+          <h3 class="d-inline-block position-relative text-capitalize z-3">
+            contact us.
+          </h3>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-12 col-lg-4 mt-4">
+            <div class="inner text-center">
+              <div
+                class="icon m-auto rounded-circle d-flex justify-content-center align-items-center mb-3"
+              >
+                <i class="fa-solid fa-location-arrow fs-2"></i>
+              </div>
+              <h6 class="mb-2 fw-bold text-capitalize">address</h6>
+              <p class="text-muted">6834 Hollywood Blvd - Los Angeles CA</p>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 mt-4">
+            <div class="inner text-center">
+              <div
+                class="icon m-auto rounded-circle d-flex justify-content-center align-items-center mb-3"
+              >
+                <i class="fa-solid fa-envelope fs-2"></i>
+              </div>
+              <h6 class="mb-2 fw-bold text-capitalize">Email</h6>
+              <p class="text-muted">Support@website.com</p>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 mt-4">
+            <div class="inner text-center">
+              <div
+                class="icon m-auto rounded-circle d-flex justify-content-center align-items-center mb-3"
+              >
+                <i class="fa-solid fa-phone fs-2"></i>
+              </div>
+              <h6 class="mb-2 fw-bold text-capitalize">phone</h6>
+              <p class="text-muted">+20 010 2517 8918</p>
+            </div>
+          </div>
+        </div>
+
+        <form action="" class="">
+          <div class="row mt-5">
+            <div class="col-md-12 col-lg-6">
+              <input
+                type="text"
+                class="form-control"
+                name="fristname"
+                placeholder="Name"
+              />
+            </div>
+
+            <div class="col-md-12 col-lg-6 mt-3 mt-lg-0">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="col-12 my-3">
+              <textarea
+                name="message"
+                placeholder="Message"
+                class="form-control"
+              ></textarea>
+            </div>
+
+            <button
+              class="btn w-auto text-white m-3 px-5 border border-1 border-black"
+            >
+              submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- end contact us -->
+
+    <!-- start footer  -->
+
+    <footer id="about" class="pt-5">
+      <div class="container text-white p-5">
+        <div class="row mb-2">
+          <div class="col-md-4">
+            <h3 class="text-white fw-semibold">Foodi</h3>
+            <p class="text-white w-75 my-3">
+              In the new era of technology we look a in the future with
+              certainty and pride to for our company and.
+            </p>
+            <div class="social-icons d-flex gap-3">
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="rounded-circle"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="fw-bold mb-3">Pages</h5>
+                <div class="d-flex flex-column gap-2">
+                  <a>Home</a>
+                  <a>About</a>
+                  <a>Menu</a>
+                  <a>Pricing</a>
+                  <a>Delivery</a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5 class="fw-bold mb-3">Help</h5>
+                <div class="d-flex flex-column gap-2">
+                  <a>Contact Us</a>
+                  <a>FAQs</a>
+                  <a>19667</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="text-white fw-semibold mb-3">Follow Us On Instagram</h5>
+            <div class="row g-2">
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image">
+                  <img
+                    class="rounded-2"
+                    src="./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="w-75 m-auto mt-5" />
+        <p class="text-center p-3">
+          Copyright © 2025 Hashtag Developer. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- end footer  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

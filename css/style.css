@@ -1,0 +1,360 @@
+/*  start global rule */
+
+    :root{
+    --mainColor-- : rgba(251, 86, 7, 1);
+
+    
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control:focus{
+   box-shadow: 0 0 0.25rem rgba(251, 86, 7, 0.5);
+}
+a{
+    text-decoration: none;
+}
+
+
+
+img{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.title h3{
+   font-size: 2.5rem;
+   font-weight: 900;
+}
+.title h3::after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+/*  end global rule */
+
+
+
+/* start register */
+
+    .title_page{
+        color: var(--mainColor--);
+    }
+    .btnSignUp{
+        background-color: var(--mainColor--);
+    }
+
+
+.btnSignUp {
+  background-color:var(--mainColor--);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+.btnSignUp:hover {
+  background-color: rgba(200, 60, 0, 1);
+}
+
+
+.custom-input:focus {
+  border-color: rgba(251, 86, 7, 1);
+  box-shadow: 0 0 8px rgba(251, 86, 7, 0.4);
+}
+
+.google-gradient {
+  
+  background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853);
+ 
+}
+/* end register */
+
+
+/* start login */
+
+.btnLogin {
+  background-color: rgba(251, 86, 7, 1);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+.btnLogin:hover {
+  background-color: rgba(200, 60, 0, 1);
+}
+
+.custom-input:focus {
+  border-color: rgba(251, 86, 7, 1);
+  box-shadow: 0 0 8px rgba(251, 86, 7, 0.4);
+}
+
+/* end login */
+
+/* start home */
+  /* start navbar */
+
+  /* start navbar */
+   /* start navbar */
+nav .navbar-brand {
+  font-size: 1.125rem !important;
+}
+
+nav .nav-link {
+  position: relative; /* مهم علشان ::after يشتغل */
+}
+
+nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .nav-link:hover::after {
+  width: 80%;
+}
+    
+    .navbar{
+      background-color: var(--mainColor--);
+    }
+    
+    #header .slider{
+      min-height: 80vh !important;
+      background-image: url(../images/6db6a08046242c265ee4fe6a7935e17a54331b22.png);
+      background-size:cover ;
+      background-position: center;      
+      
+    }
+        #slider.slide-in {
+      animation: slideIn 0.7s ease-in-out forwards;
+    }
+    @keyframes slideIn {
+      from {
+        background-position: 100% center;
+      }
+      to {
+        background-position: center;
+      }
+    }
+    #slider.slide-out {
+      animation: slideOut 0.7s ease-in-out forwards;
+    }
+
+    @keyframes slideOut {
+      from {
+        background-position: center;
+      }
+      to {
+        background-position: -100% center; 
+      }
+    }
+
+
+    #previous, 
+      #next {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      #previous:hover, 
+      #next:hover {
+      
+        color: black !important;
+        background-color: var(--mainColor--) !important;
+        border-radius: 50%;      
+      }
+
+      #previous:active, 
+      #next:active {
+        transform: scale(1.1) rotate(-10deg) !important; 
+}
+#sliderTitle,
+#sliderText,
+#sliderBtn {
+  transition: opacity 0.4s ease;
+}
+/* end navbar */
+/* start header  */
+
+    #header .layer{
+      background-color: rgba(0, 0, 0, 0.2);
+
+    }
+    #header h1{
+      font-size: 3rem;
+    }
+    #header button{
+      background-color: var(--mainColor--);
+    }
+/* end header  */
+
+/* start meals */
+
+#menu {
+  background-color: #F7F7F7;
+}
+ #menu .filter-box button{
+  background-color: var(--mainColor--);
+ }
+
+ #menu .links i{
+  color: #777575;
+  transition: all 0.3s;
+ }
+ #menu .links i:hover{
+  color: var(--mainColor--);
+ }
+
+ #meals .card{
+  
+  overflow: hidden;
+ }
+ #meals img{
+  transition: all 0.3s;
+ }
+ #meals .heart{
+  transition: all 0.3s;
+ }
+
+ #meals .card:hover img{
+  transform: scale(1.1);
+ }
+ #meals .card:hover .heart{
+   transform: rotate(45deg);
+  
+ }
+ .links i {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.links i:hover {
+  transform: scale(1.2);
+  color: #676666; 
+}
+
+
+
+ .filter-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.filter-btn:hover {
+  background: #f1f1f1;
+}
+
+.filter-btn.active {
+  background: #dc3545; /* الأحمر */
+  color: white;
+}
+
+/* end meals */
+
+/* start contact us */
+ #contact button{
+  background-color: var(--mainColor--);
+ }
+  #contact .inner i{
+    transition: all 0.3s;
+  }
+ #contact .inner:hover i{
+  color: var(--mainColor--);
+ }
+
+
+/* end contact us */
+/* start footer */
+
+ #about{
+  background-color: rgba(39, 39, 39, 1);
+ }
+  .social-icons a {
+      width: 40px;
+      height: 40px;
+      background: #ff9966;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      background: #ff7744;
+      transform: scale(1.1);
+    }
+
+/* end footer */
+
+/* end home */
+
+/* start productdetails */
+    #productDetails .cart{
+      background-color: var(--mainColor--);
+    }
+   #productDetails  .cart {
+  background: linear-gradient(to right, rgb(251, 86, 7), rgb(255, 140, 66));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+  #productDetails .cart:hover {
+  background: linear-gradient(to right, rgb(230, 70, 5), rgb(240, 120, 50));
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+ #productDetails .cart:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+    
+/* end productdetails */
+
+
+/* start cartpage */
+#cart .checkOut{
+  background-color: var(--mainColor--);
+}
+/* end cartpage */
+
+
+
+
+
+
+
+
+
+/* start orderDone */
+.container h3 {
+  color: #333;
+}
+
+.container p {
+  color: #555;
+}
+
+/* end orderDone */
