@@ -33,7 +33,6 @@ export function initLogin() {
         setTimeout(() => {
           window.location.href = "../home.html";
         }, 2000);
-        sessionStorage.setItem("n", username);
       } else {
         incorrectMsg.classList.remove("d-none");
         RequiedInputs.classList.add("d-none");
@@ -51,7 +50,6 @@ export function initLogin() {
         users[i].email === emailInput &&
         users[i].password === passwordInput
       ) {
-        username = users[i].name;
         return users[i];
       }
     }

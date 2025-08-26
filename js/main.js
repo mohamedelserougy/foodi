@@ -7,6 +7,8 @@ import { initcart } from "./cart.js";
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.id;
 
+  
+
   switch (page) {
     case "login":
       initLogin();

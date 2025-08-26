@@ -1,5 +1,12 @@
+import { updateCartCount } from "./cartUtilite.js";
+
 export function initProductDetails() {
   let mealsDetails = document.getElementById("mealDetails");
+
+  let numItem = document.querySelector(".numItem");
+  let { cart } = JSON.parse(sessionStorage.getItem("currentUser")) || {};
+
+  updateCartCount();
 
   /* get product from local storage */
   let meal = JSON.parse(sessionStorage.getItem("selectedMeal"));
@@ -52,6 +59,7 @@ export function initProductDetails() {
             "linear-gradient(to right, rgb(251, 86, 7), rgb(255, 140, 66))",
         },
       }).showToast();
+      updateCartCount();
       let users = JSON.parse(localStorage.getItem("users")) || [];
       let updatedUsers = users.map((user) => {
         if (user.email === currentUser.email) {

@@ -1,7 +1,7 @@
 import { data } from "./dataProduct.js";
-export function initHome() {
-  console.log(data);
+import { updateCartCount } from "./cartUtilite.js";
 
+export function initHome() {
   let next = document.getElementById("next");
   let previous = document.getElementById("previous");
   let slider = document.getElementById("slider");
@@ -12,11 +12,15 @@ export function initHome() {
   let buttons = document.querySelectorAll(".filter-btn");
   let priceInput = document.getElementById("priceInput");
   let cartPage = document.querySelector(".cartPage");
+  let numItem = document.querySelector(".numItem");
+  let btnLogout = document.querySelector(".logout");
+
+  btnLogout.addEventListener("click", () => {
+    sessionStorage.removeItem("currentUser");
+    window.location.href = "./index.html";
+  });
 
   let { cart } = JSON.parse(sessionStorage.getItem("currentUser")) || {};
-  console.log(cart);
-
-  // let apply = document.getElementById("apply");
 
   let sliderarr = [
     {
@@ -29,25 +33,21 @@ export function initHome() {
       image: "../images/meal-1.jpg",
       title: "Fresh & Delicious",
       text: "We serve only the freshest ingredients to make every meal unforgettable.",
-      button: "View Menu",
     },
     {
       image: "../images/meal-2.jpg",
       title: "Fast Delivery",
       text: "Hot meals, delivered quickly and safely right to your door.",
-      button: "Order Fast",
     },
     {
       image: "../images/meal-3.jpg",
       title: "Taste the Difference",
       text: "Discover flavors that bring joy to your table every single time.",
-      button: "Get Started",
     },
     {
       image: "../images/meal-4.jpg",
       title: "Special Offers",
       text: "Enjoy exclusive discounts and deals on your favorite meals today!",
-      button: "Grab Offer",
     },
   ];
 
@@ -72,13 +72,22 @@ export function initHome() {
       slider.style.backgroundImage = `url(${sliderarr[index].image})`;
       sliderTitle.textContent = sliderarr[index].title;
       sliderText.textContent = sliderarr[index].text;
-      sliderBtn.textContent = sliderarr[index].button;
+      if (sliderarr[index].button) {
+        sliderBtn.textContent = sliderarr[index].button;
+        sliderBtn.style.display = "inline-block";
+      } else {
+        sliderBtn.style.display = "none";
+      }
 
       sliderTitle.style.opacity = 1;
       sliderText.style.opacity = 1;
       sliderBtn.style.opacity = 1;
     }, 300);
   }
+  sliderBtn.addEventListener("click", () => {
+    let targetSection = document.getElementById("meals");
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
 
   /* prev code of filter  */
   // btnpizza.addEventListener("click", () => {
@@ -191,6 +200,7 @@ export function initHome() {
                 "linear-gradient(to right, rgb(251, 86, 7), rgb(255, 140, 66))",
             },
           }).showToast();
+          updateCartCount();
           let users = JSON.parse(localStorage.getItem("users")) || [];
           let updatedUsers = users.map((user) => {
             if (user.email === currentUser.email) {
@@ -218,7 +228,8 @@ export function initHome() {
     window.location.href = "cart.html";
   });
 
-  window.onload = () => {
+  window.addEventListener("DOMContentLoaded", () => {
     displayData(data);
-  };
+    updateCartCount();
+  });
 }
