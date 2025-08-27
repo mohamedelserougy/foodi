@@ -63,4 +63,17 @@ export function initLogin() {
     }
     return false;
   }
+  // function showErrorMessage(id) {
+  //   const el = document.getElementById(id);
+  //   el.classList.remove("d-none");
+  //   el.classList.add("show-error");
+
+  //   el.addEventListener(
+  //     "animationend",
+  //     () => {
+  //       el.classList.remove("show-error");
+  //     },
+  //     { once: true }
+  //   );
+  // }
 }

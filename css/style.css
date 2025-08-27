@@ -31,6 +31,117 @@ ul{
 }
 
 
+/* start animation  */
+
+/* start sign up  */
+  /* ========== Animation Keyframes ========== */
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+
+#signup h2 {
+  animation: fadeIn 1s ease forwards;
+}
+
+#signup form {
+  animation: slideUp 1s ease forwards;
+}
+
+#signup form i {
+  opacity: 0;
+  animation: scaleIn 0.6s ease forwards; 
+}
+
+#signup form i:nth-child(1) { animation-delay: 1.2s; }
+#signup form i:nth-child(2) { animation-delay: 1.4s; }
+#signup form i:nth-child(3) { animation-delay: 1.6s; }
+
+
+#signup p.text-danger,
+#signup span.text-danger {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+
+#login h2 {
+  animation: slideLeft 1s ease forwards;
+}
+
+#login form {
+  animation: zoomIn 1s ease forwards;
+}
+
+#login form i {
+  opacity: 0;
+  animation: bounceIn 0.4s ease forwards; 
+}
+
+#login form i:nth-child(1) { animation-delay: 1.2s; }
+#login form i:nth-child(2) { animation-delay: 1.4s; }
+#login form i:nth-child(3) { animation-delay: 1.6s; }
+
+#login span.text-danger {
+  display: inline-block;
+}
+#login span.text-danger.show-error {
+  animation: shake 0.4s ease;
+}
+
+
+/* start home page */
+  
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* end home page */
+/* end animation  */
+
 .title h3{
    font-size: 2.5rem;
    font-weight: 900;

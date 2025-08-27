@@ -67,8 +67,8 @@ export function initSignup() {
 
     let message = document.getElementById(msgID);
     let regex = {
-      signup_name: /^.{3,}$/,
-      signup_email: /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/,
+      signup_name: /^[A-Za-z\u0600-\u06FF ]{3,50}$/,
+      signup_email: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(com|net|org)$/,
       signup_password: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$/,
     };
 

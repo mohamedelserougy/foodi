@@ -137,7 +137,7 @@ export function initHome() {
     product.innerHTML = products
       .map((item) => {
         return `
-      <div class="col-sm-12 col-md-6 col-lg-3 p-2">
+      <div class="col-sm-12 col-md-6 col-lg-3 p-2 animate__animated animate__fadeInUp">
         <div class="card">
           <div class="image position-relative">
             <img
@@ -225,5 +225,42 @@ export function initHome() {
   window.addEventListener("DOMContentLoaded", () => {
     displayData(data);
     updateCartCount();
+    const mealsSection = document.getElementById("meals");
+
+    if (mealsSection) {
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              mealsSection.classList.add(
+                "animate__animated",
+                "animate__fadeInUp"
+              );
+              observer.unobserve(mealsSection);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(mealsSection);
+    }
   });
+
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  reveals.forEach((el) => observer.observe(el));
 }
