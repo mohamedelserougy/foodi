@@ -48,7 +48,7 @@ export function initSignup() {
       clear();
 
       setTimeout(function () {
-        window.location.href = "../index.html";
+        window.location.href = "index.html";
       }, 2000);
     }
   }
