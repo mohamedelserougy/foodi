@@ -39,7 +39,7 @@ export function initLogin() {
           },
         }).showToast();
         setTimeout(() => {
-          window.location.href = "../home.html";
+          window.location.href = "home.html";
         }, 2000);
       } else {
         incorrectMsg.classList.remove("d-none");
@@ -63,5 +63,4 @@ export function initLogin() {
     }
     return false;
   }
-
 }
