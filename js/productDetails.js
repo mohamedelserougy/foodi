@@ -79,7 +79,7 @@ export async function initProductDetails() {
         duration: 1000,
         style: {
           background:
-            "linear-gradient(to right, rgb(251, 86, 8), rgb(255, 140, 66))",
+            "linear-gradient(to right, rgb(251, 86, 7), rgb(255, 140, 66))",
         },
       }).showToast();
     }
