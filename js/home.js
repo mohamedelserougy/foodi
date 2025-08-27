@@ -1,5 +1,7 @@
 import { data } from "./dataProduct.js";
-import { updateCartCount } from "./cartUtilite.js";
+import { updateCartCount } from "../utilites/cartUtilite.js";
+import { showLoading } from "../utilites/loading.js";
+import { goCartPage, logout } from "../models/models.js";
 
 export function initHome() {
   let next = document.getElementById("next");
@@ -14,11 +16,6 @@ export function initHome() {
   let cartPage = document.querySelector(".cartPage");
   let numItem = document.querySelector(".numItem");
   let btnLogout = document.querySelector(".logout");
-
-  btnLogout.addEventListener("click", () => {
-    sessionStorage.removeItem("currentUser");
-    window.location.href = "./index.html";
-  });
 
   let { cart } = JSON.parse(sessionStorage.getItem("currentUser")) || {};
 
@@ -106,7 +103,8 @@ export function initHome() {
   let currentCategory = "All";
 
   buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
+      await showLoading();
       currentCategory = btn.getAttribute("data-category");
       applyFilters();
 
@@ -115,9 +113,7 @@ export function initHome() {
     });
   });
 
-  priceInput.addEventListener("input", () => {
-    applyFilters();
-  });
+  priceInput.addEventListener("input", applyFilters);
 
   function applyFilters() {
     let filteredData = data;
@@ -141,7 +137,7 @@ export function initHome() {
     product.innerHTML = products
       .map((item) => {
         return `
-      <div class="col-md-3">
+      <div class="col-sm-12 col-md-6 col-lg-3 p-2">
         <div class="card">
           <div class="image position-relative">
             <img
@@ -223,10 +219,8 @@ export function initHome() {
     });
   }
 
-  cartPage.addEventListener("click", () => {
-    console.log("cart clicked");
-    window.location.href = "cart.html";
-  });
+  cartPage.addEventListener("click", goCartPage);
+  btnLogout.addEventListener("click", logout);
 
   window.addEventListener("DOMContentLoaded", () => {
     displayData(data);

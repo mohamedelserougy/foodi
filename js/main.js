@@ -7,7 +7,7 @@ import { initcart } from "./cart.js";
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.id;
 
-  
+  let flag = sessionStorage.getItem("currentUser");
 
   switch (page) {
     case "login":
@@ -17,13 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
       initSignup();
       break;
     case "home":
-      initHome();
+      if (flag) {
+        initHome();
+      } else {
+        window.location.href = "./index.html";
+      }
       break;
     case "productDetails":
-      initProductDetails();
+      if (flag) {
+        initProductDetails();
+      } else {
+        window.location.href = "./index.html";
+      }
       break;
     case "cart":
-      initcart();
+      if (flag) {
+        initcart();
+      } else {
+        window.location.href = "./index.html";
+      }
       break;
     default:
       console.log("No script for this page");

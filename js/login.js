@@ -15,6 +15,13 @@ export function initLogin() {
     users = JSON.parse(localStorage.getItem("users"));
   }
 
+  /* to clear inputs and make isvalidClass none */
+  function clear() {
+    [email, password].forEach((e) => {
+      e.value = null;
+      e.classList.remove("is-valid", "is-invalid");
+    });
+  }
   loginBtn.addEventListener("click", function (e) {
     e.preventDefault();
     if (email.value !== "" && password.value !== "") {
@@ -22,6 +29,7 @@ export function initLogin() {
 
       if (vaildUser) {
         sessionStorage.setItem("currentUser", JSON.stringify(vaildUser));
+        clear();
         Toastify({
           text: "Account login successfully!",
           duration: 1000,

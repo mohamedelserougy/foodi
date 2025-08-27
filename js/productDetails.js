@@ -1,7 +1,12 @@
-import { updateCartCount } from "./cartUtilite.js";
+import { goCartPage, logout } from "../models/models.js";
+import { updateCartCount } from "../utilites/cartUtilite.js";
+import { showLoading } from "../utilites/loading.js";
 
-export function initProductDetails() {
+export async function initProductDetails() {
+  await showLoading();
   let mealsDetails = document.getElementById("mealDetails");
+  let btnLogout = document.querySelector(".logout");
+  let cartPage = document.querySelector(".cartPage");
 
   let numItem = document.querySelector(".numItem");
   let { cart } = JSON.parse(sessionStorage.getItem("currentUser")) || {};
@@ -79,4 +84,7 @@ export function initProductDetails() {
       }).showToast();
     }
   });
+
+  cartPage.addEventListener("click", goCartPage);
+  btnLogout.addEventListener("click", logout);
 }

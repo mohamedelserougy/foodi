@@ -1,14 +1,15 @@
-import { updateCartCount } from "./cartUtilite.js";
+import { goCartPage, logout } from "../models/models.js";
+import { updateCartCount } from "../utilites/cartUtilite.js";
+import { showLoading } from "../utilites/loading.js";
 export function initcart() {
   let displayPrice = document.querySelector(".totalPrice");
   let displaySubTotal = document.querySelector(".subTotal");
   let cartCheckout = document.querySelector(".cartCheckout");
   let numItem = document.querySelector(".numItem");
   let btnCheckout = document.querySelector(".checkOut");
+  let btnLogout = document.querySelector(".logout");
+  let cartPage = document.querySelector(".cartPage");
 
-
-
-  
   let { cart } = JSON.parse(sessionStorage.getItem("currentUser")) || {};
 
   /* update price */
@@ -168,7 +169,11 @@ export function initcart() {
     }, 1500);
   });
 
+  cartPage.addEventListener("click", goCartPage);
+  btnLogout.addEventListener("click", logout);
+
   window.addEventListener("DOMContentLoaded", () => {
+    showLoading();
     renderCart();
     updateCartCount();
     updateTotalPrice();
