@@ -2,7 +2,7 @@ export const data = [
   {
     id: 36,
     name: "Coca Cola",
-    image: "../images/Cola-.png",
+    image: "./../images/Cola-.png",
     price: 1.99,
     calories: 150,
     description: "Chilled soft drink served with ice.",
@@ -12,7 +12,7 @@ export const data = [
   {
     id: 13,
     name: "BBQ Bacon Burger",
-    image: "../images/BBQ Bacon Burger.jpg",
+    image: "./../images/BBQ Bacon Burger.jpg",
     price: 9.99,
     description: "Grilled beef, crispy bacon, smoky BBQ sauce, and cheese.",
     category: "Burger",
@@ -22,7 +22,7 @@ export const data = [
   {
     id: 27,
     name: "Cheesecake",
-    image: "../images/BlueberryCheesecake.webp",
+    image: "./../images/BlueberryCheesecake.webp",
     price: 6.5,
     calories: 500,
     description: "Creamy cheesecake with a buttery biscuit base.",
@@ -32,7 +32,7 @@ export const data = [
   {
     id: 3,
     name: "BBQ Chicken Pizza",
-    image: "../images/BBQ-Chicken-Pizza-4.jpg",
+    image: "./../images/BBQ-Chicken-Pizza-4.jpg",
     price: 11.25,
     description:
       "Grilled chicken with smoky BBQ sauce, onions, and mozzarella cheese.",
@@ -43,7 +43,7 @@ export const data = [
   {
     id: 22,
     name: "Pesto Pasta",
-    image: "../images/Pesto Pasta.jpeg",
+    image: "./../images/Pesto Pasta.jpeg",
     price: 9.5,
     calories: 550,
     description: "Fresh basil pesto sauce with parmesan cheese.",
@@ -53,7 +53,7 @@ export const data = [
   {
     id: 40,
     name: "Hot Chocolate",
-    image: "../images/hot-chocolate.jpg",
+    image: "./../images/hot-chocolate.jpg",
     price: 3.5,
     calories: 210,
     description: "Warm chocolate drink topped with cream.",
@@ -63,7 +63,7 @@ export const data = [
   {
     id: 17,
     name: "Fettuccine Alfredo",
-    image: "../images/fettuccine-alfredo.jpg",
+    image: "./../images/fettuccine-alfredo.jpg",
     price: 10.49,
     calories: 750,
     description: "Creamy white sauce pasta with parmesan and butter.",
@@ -73,7 +73,7 @@ export const data = [
   {
     id: 32,
     name: "Panna Cotta",
-    image: "../images/Panna Cotta.webp",
+    image: "./../images/Panna Cotta.webp",
     price: 5.99,
     calories: 300,
     description: "Creamy Italian dessert topped with berries.",
@@ -83,7 +83,7 @@ export const data = [
   {
     id: 15,
     name: "Chicken Burger",
-    image: "../images/Chicken Burger.jpeg",
+    image: "./../images/Chicken Burger.jpeg",
     price: 7.25,
     description: "Crispy fried chicken breast with mayo and lettuce.",
     category: "Burger",
@@ -93,7 +93,7 @@ export const data = [
   {
     id: 5,
     name: "Four Cheese Pizza",
-    image: "../images/four-cheeses-pizza.avif",
+    image: "./../images/four-cheeses-pizza.avif",
     price: 12.0,
     description:
       "Delicious blend of mozzarella, cheddar, parmesan, and gorgonzola cheese.",
@@ -104,7 +104,7 @@ export const data = [
   {
     id: 44,
     name: "Espresso",
-    image: "../images/Espresso.jpeg",
+    image: "./../images/Espresso.jpeg",
     price: 2.5,
     calories: 15,
     description: "Strong and rich Italian coffee shot.",
@@ -114,7 +114,7 @@ export const data = [
   {
     id: 26,
     name: "Chocolate Cake",
-    image: "../images/chocolate-cake-3.jpg",
+    image: "./../images/chocolate-cake-3.jpg",
     price: 5.99,
     calories: 450,
     description: "Rich and moist chocolate layered cake.",
@@ -124,7 +124,7 @@ export const data = [
   {
     id: 19,
     name: "Lasagna",
-    image: "../images/Lasagna.jpg",
+    image: "./../images/Lasagna.jpg",
     price: 11.25,
     calories: 800,
     description: "Layers of pasta with beef, cheese, and tomato sauce.",
@@ -134,7 +134,7 @@ export const data = [
   {
     id: 1,
     name: "Margherita Pizza",
-    image: "../images/Margherita Pizza.webp",
+    image: "./../images/Margherita Pizza.webp",
     price: 8.99,
     description:
       "Classic pizza topped with tomato sauce, mozzarella cheese, and fresh basil.",
@@ -145,7 +145,7 @@ export const data = [
   {
     id: 43,
     name: "Green Tea",
-    image: "../images/Green Tea.jpeg",
+    image: "./../images/Green Tea.jpeg",
     price: 2.2,
     calories: 20,
     description: "Healthy antioxidant-rich green tea.",
@@ -155,7 +155,7 @@ export const data = [
   {
     id: 11,
     name: "Classic Beef Burger",
-    image: "../images/Classic Beef Burger.webp",
+    image: "./../images/Classic Beef Burger.webp",
     price: 7.99,
     description: "Juicy beef patty with lettuce, tomato, onions, and cheese.",
     category: "Burger",
@@ -165,7 +165,7 @@ export const data = [
   {
     id: 35,
     name: "Cupcakes",
-    image: "../images/Vanilla-Cupcakes.jpg",
+    image: "./../images/Vanilla-Cupcakes.jpg",
     price: 3.5,
     calories: 280,
     description: "Mini cakes topped with colorful frosting.",
@@ -175,7 +175,7 @@ export const data = [
   {
     id: 18,
     name: "Penne Arrabbiata",
-    image: "../images/Chicken_Penne_Arrabbiata_1.jpg",
+    image: "./../images/Chicken_Penne_Arrabbiata_1.jpg",
     price: 8.99,
     calories: 500,
     description: "Spicy tomato-based pasta with chili and garlic.",
@@ -185,7 +185,7 @@ export const data = [
   {
     id: 30,
     name: "Brownie",
-    image: "../images/Brownie.jpeg",
+    image: "././../images/Brownie.jpeg",
     price: 4.5,
     calories: 400,
     description: "Fudgy chocolate brownie topped with nuts.",
@@ -195,7 +195,7 @@ export const data = [
   {
     id: 2,
     name: "Pepperoni Pizza",
-    image: "../images/Pepperoni_Pizza.jpg",
+    image: "./../images/Pepperoni_Pizza.jpg",
     price: 10.49,
     description:
       "Thin crust pizza loaded with spicy pepperoni slices and melted cheese.",
@@ -206,7 +206,7 @@ export const data = [
   {
     id: 42,
     name: "Milkshake",
-    image: "../images/Milkshake.jpeg",
+    image: "./../images/Milkshake.jpeg",
     price: 3.75,
     calories: 300,
     description: "Creamy milkshake with vanilla ice cream.",
@@ -216,7 +216,7 @@ export const data = [
   {
     id: 12,
     name: "Cheese Burger",
-    image: "../images/cheese-burger.avif",
+    image: "./../images/cheese-burger.avif",
     price: 8.49,
     description:
       "Beef patty topped with melted cheddar cheese and fresh veggies.",
@@ -227,7 +227,7 @@ export const data = [
   {
     id: 20,
     name: "Seafood Pasta",
-    image: "../images/seafood-pasta.jpg",
+    image: "./../images/seafood-pasta.jpg",
     price: 12.0,
     calories: 650,
     description: "Pasta served with shrimp, calamari, and garlic sauce.",
@@ -237,7 +237,7 @@ export const data = [
   {
     id: 31,
     name: "Apple Pie",
-    image: "../images/Apple Pie.jpeg",
+    image: "./../images/Apple Pie.jpeg",
     price: 5.25,
     calories: 420,
     description: "Classic pie with sweet apple filling.",
@@ -247,7 +247,7 @@ export const data = [
   {
     id: 39,
     name: "Iced Coffee",
-    image: "../images/Iced-Coffee-6.jpg",
+    image: "./../images/Iced-Coffee-6.jpg",
     price: 3.25,
     calories: 90,
     description: "Cold coffee served with ice cubes.",
@@ -257,7 +257,7 @@ export const data = [
   {
     id: 14,
     name: "Double Beef Burger",
-    image: "../images/Double Beef Burger.jpeg",
+    image: "./../images/Double Beef Burger.jpeg",
     price: 11.5,
     description: "Two juicy patties with double cheese, lettuce, and tomato.",
     category: "Burger",
@@ -267,7 +267,7 @@ export const data = [
   {
     id: 28,
     name: "Tiramisu",
-    image: "../images/Tiramisu.jpg",
+    image: "./../images/Tiramisu.jpg",
     price: 6.99,
     calories: 480,
     description: "Italian coffee-flavored dessert with mascarpone.",
@@ -277,7 +277,7 @@ export const data = [
   {
     id: 41,
     name: "Mojito",
-    image: "../images/Mojito.webp",
+    image: "./../images/Mojito.webp",
     price: 4.25,
     calories: 100,
     description: "Mint and lime refreshing summer drink.",
@@ -287,7 +287,7 @@ export const data = [
   {
     id: 21,
     name: "Carbonara",
-    image: "../images/Carbonara.webp",
+    image: "./../images/Carbonara.webp",
     price: 10.75,
     calories: 700,
     description: "Egg-based sauce pasta with crispy bacon and parmesan.",
@@ -297,7 +297,7 @@ export const data = [
   {
     id: 34,
     name: "Donuts",
-    image: "../images/donuts.webp",
+    image: "./../images/donuts.webp",
     price: 3.75,
     calories: 320,
     description: "Fluffy donuts glazed with sugar and chocolate.",
@@ -307,7 +307,7 @@ export const data = [
   {
     id: 45,
     name: "Latte",
-    image: "../images/Latte.jpeg",
+    image: "./../images/Latte.jpeg",
     price: 3.2,
     calories: 120,
     description: "Smooth espresso with steamed milk.",
@@ -317,7 +317,7 @@ export const data = [
   {
     id: 23,
     name: "Chicken Alfredo Pasta",
-    image: "../images/Chicken-Alfredo-Pasta.jpg",
+    image: "./../images/Chicken-Alfredo-Pasta.jpg",
     price: 11.0,
     calories: 780,
     description: "Creamy alfredo pasta with grilled chicken breast.",
@@ -327,7 +327,7 @@ export const data = [
   {
     id: 37,
     name: "Fresh Orange Juice",
-    image: "../images/Fresh Orange Juice.jpeg",
+    image: "./../images/Fresh Orange Juice.jpeg",
     price: 2.99,
     calories: 180,
     description: "Freshly squeezed orange juice.",
@@ -337,7 +337,7 @@ export const data = [
   {
     id: 24,
     name: "Mac and Cheese",
-    image: "../images/mac-and-cheese.jpg",
+    image: "./../images/mac-and-cheese.jpg",
     price: 8.25,
     calories: 650,
     description: "Baked pasta with creamy cheddar cheese sauce.",
@@ -347,7 +347,7 @@ export const data = [
   {
     id: 29,
     name: "Ice Cream Sundae",
-    image: "../images/Ice Cream Sundae.jpeg",
+    image: "./../images/Ice Cream Sundae.jpeg",
     price: 4.75,
     calories: 350,
     description: "Vanilla ice cream topped with chocolate syrup.",
@@ -357,7 +357,7 @@ export const data = [
   {
     id: 4,
     name: "Veggie Pizza",
-    image: "../images/vegetarian-pizza.jpg",
+    image: "./../images/vegetarian-pizza.jpg",
     price: 9.75,
     description:
       "Topped with bell peppers, mushrooms, olives, onions, and mozzarella cheese.",
@@ -368,7 +368,7 @@ export const data = [
   {
     id: 33,
     name: "Strawberry Shortcake",
-    image: "../images/Strawberry Shortcake.jpg",
+    image: "./../images/Strawberry Shortcake.jpg",
     price: 6.2,
     calories: 380,
     description: "Vanilla sponge cake with fresh strawberries.",
@@ -378,7 +378,7 @@ export const data = [
   {
     id: 38,
     name: "Lemonade",
-    image: "../images/lemonada.jpg",
+    image: "./../images/lemonada.jpg",
     price: 2.5,
     calories: 120,
     description: "Refreshing lemonade with mint.",
@@ -388,7 +388,7 @@ export const data = [
   {
     id: 25,
     name: "Ravioli",
-    image: "../images/ravioli.jpg",
+    image: "./../images/ravioli.jpg",
     price: 10.2,
     calories: 600,
     description: "Stuffed pasta pockets with ricotta and tomato sauce.",
@@ -398,7 +398,7 @@ export const data = [
   {
     id: 16,
     name: "Spaghetti Bolognese",
-    image: "../images/Spaghetti Bolognese.jpeg",
+    image: "./../images/Spaghetti Bolognese.jpeg",
     price: 9.99,
     calories: 600,
     description: "Classic Italian pasta with rich meat sauce and parmesan.",
