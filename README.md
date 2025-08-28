@@ -5,28 +5,28 @@ JavaScript, and Bootstrap**.\
 This project demonstrates basic e-commerce functionality including
 authentication, product listing, cart system, and order confirmation.
 
-------------------------------------------------------------------------
+---
 
 ## 🚀 Features
 
--   🔑 **User Authentication**
-    -   Login with existing account
-    -   Signup/Register new account
-    -   Social login options (Google, Facebook, iCloud)
--   🏠 **Home Page**
-    -   Product listing with images, names, and prices
-    -   Navigation to product details
--   📄 **Product Details**
-    -   View product information (image, description, price, stock
-        availability)
--   🛒 **Cart System**
-    -   Add products to cart
-    -   View cart items and total price
-    -   Remove items from cart
--   ✅ **Order Confirmation**
-    -   "Order Done" page displayed after successful checkout
+- 🔑 **User Authentication**
+  - Login with existing account
+  - Signup/Register new account
+  - Social login options (Google, Facebook, iCloud)
+- 🏠 **Home Page**
+  - Product listing with images, names, and prices
+  - Navigation to product details
+- 📄 **Product Details**
+  - View product information (image, description, price, stock
+    availability)
+- 🛒 **Cart System**
+  - Add products to cart
+  - View cart items and total price
+  - Remove items from cart
+- ✅ **Order Confirmation**
+  - "Order Done" page displayed after successful checkout
 
-------------------------------------------------------------------------
+---
 
 ## 🗂 Project Structure
 
@@ -59,40 +59,39 @@ authentication, product listing, cart system, and order confirmation.
     ├── productDetails.html        # Product details page
     └── signUp.html                # Signup page
 
-------------------------------------------------------------------------
+---
 
 ## 🛠️ Technologies Used
 
--   **HTML5** - Structure
--   **CSS3 / Bootstrap** - Styling and responsive design
--   **JavaScript (ES6 Modules)** - Core logic
--   **FontAwesome** - Icons
--   **Toastify.js** - Toast notifications
+- **HTML5** - Structure
+- **CSS3 / Bootstrap** - Styling and responsive design
+- **JavaScript (ES6 Modules)** - Core logic
+- **FontAwesome** - Icons
+- **Toastify.js** - Toast notifications
 
-------------------------------------------------------------------------
+---
 
 ## 📦 Installation & Usage
 
 1.  Clone the repository:
 
-    ``` bash
-    git clone https://github.com/yourusername/food-ordering-website.git
+    ```bash
+    https://github.com/moham~edelserougy/foodi.git
     ```
 
 2.  Open the project folder and run with **Live Server** or simply open
     `index.html` in a browser.
 
-
-------------------------------------------------------------------------
+---
 
 ## 📌 Future Improvements
 
--   Connect with backend (Node.js/Express + MongoDB)
--   Implement user authentication with JWT
--   Store cart in DB
--   Improve UI with animations
+- Connect with backend (Node.js/Express + MongoDB)
+- Implement user authentication with JWT
+- Store cart in DB
+- Improve UI with animations
 
-------------------------------------------------------------------------
+---
 
 ## 👨‍💻 Author
 
