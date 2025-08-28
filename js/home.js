@@ -21,28 +21,28 @@ export function initHome() {
 
   let sliderarr = [
     {
-      image: "../images/6db6a08046242c265ee4fe6a7935e17a54331b22.png",
+      image: "./images/6db6a08046242c265ee4fe6a7935e17a54331b22.png",
       title: "Welcome to Foodi",
       text: "Your favorite meals delivered right to your doorstep. Explore our menu and order now!",
       button: "Order Now",
     },
     {
-      image: "../images/meal-1.jpg",
+      image: "./images/meal-1.jpg",
       title: "Fresh & Delicious",
       text: "We serve only the freshest ingredients to make every meal unforgettable.",
     },
     {
-      image: "../images/meal-2.jpg",
+      image: "./images/meal-2.jpg",
       title: "Fast Delivery",
       text: "Hot meals, delivered quickly and safely right to your door.",
     },
     {
-      image: "../images/meal-3.jpg",
+      image: "./images/meal-3.jpg",
       title: "Taste the Difference",
       text: "Discover flavors that bring joy to your table every single time.",
     },
     {
-      image: "../images/meal-4.jpg",
+      image: "./images/meal-4.jpg",
       title: "Special Offers",
       text: "Enjoy exclusive discounts and deals on your favorite meals today!",
     },
