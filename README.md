@@ -76,7 +76,7 @@ authentication, product listing, cart system, and order confirmation.
 1.  Clone the repository:
 
     ```bash
-    https://github.com/moham~edelserougy/foodi.git
+    https://github.com/mohamedelserougy/foodi.git
     ```
 
 2.  Open the project folder and run with **Live Server** or simply open
